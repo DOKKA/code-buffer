@@ -28,13 +28,26 @@ myLayout.registerComponent( 'example', function( container, state ){
   editor.session.setMode('ace/mode/'+mode);
   editor.setOptions({fontSize: fontSize});
   container.setTitle(name);
+
+  container.on('resize',function(){
+    editor.resize();
+  });
 });
 
 $('#btnAdd').click(function(){
-  var container = myLayout.root.contentItems[0].addChild({
-    type: 'component',
-    componentName: 'example'
-  });
+  if(myLayout.root.contentItems && myLayout.root.contentItems.length > 0){
+    var container = myLayout.root.contentItems[0].addChild({
+      type: 'component',
+      componentName: 'example'
+    });
+  } else {
+    var container = myLayout.root.addChild({
+      type: 'component',
+      componentName: 'example'
+    });
+  }
+
+
 });
 
 $.get('/modes.html',function(data){
