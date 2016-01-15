@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+
+    <title>code buffer2</title>
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/golden-layout/src/css/goldenlayout-base.css" />
+    <link rel="stylesheet" href="/bower_components/golden-layout/src/css/goldenlayout-dark-theme.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+
+  <div id="menu">
+    <button id="btnAdd">+</button>
+    <input id="txtName" type="text" size="30" placeholder="Enter a name">
+    <select id="selMode" size="1"></select>
+    <select id="selTheme" size="1"></select>
+    <select id="selFontsize" size="1">
+      <option value="10px">10px</option>
+      <option value="11px">11px</option>
+      <option value="12px" selected="selected">12px</option>
+      <option value="13px">13px</option>
+      <option value="14px">14px</option>
+      <option value="16px">16px</option>
+      <option value="18px">18px</option>
+      <option value="20px">20px</option>
+      <option value="24px">24px</option>
+    </select>
+  </div>
+  <div id="main">
+  </div>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/golden-layout/dist/goldenlayout.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+  <script src="/bower_components/ace-builds/src-noconflict/ace.js"></script>
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

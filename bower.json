@@ -1,0 +1,18 @@
+{
+  "name": "code-buffer2",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "golden-layout": "~1.0.10",
+    "ace-builds": "ajaxorg/ace-builds#~1.2.2"
+  },
+  "overrides": {
+    "golden-layout": {
+      "main": [
+        "dist/goldenlayout.min.js",
+        "src/css/goldenlayout-base.css",
+        "src/css/goldenlayout-dark-theme.css"
+      ]
+    }
+  }
+}
