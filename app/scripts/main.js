@@ -14,8 +14,15 @@ var config = {
   }]
 };
 
-var myLayout = new GoldenLayout( config, $('#main') );
 
+var myLayout,
+  savedState = localStorage.getItem( 'savedState' );
+
+if( savedState !== null ) {
+  myLayout = new GoldenLayout( JSON.parse( savedState ),$('#main') );
+} else {
+  myLayout = new GoldenLayout( config ,$('#main'));
+}
 
 
 myLayout.registerComponent( 'example', function( container, state ){
@@ -32,6 +39,11 @@ myLayout.registerComponent( 'example', function( container, state ){
   container.on('resize',function(){
     editor.resize();
   });
+});
+
+myLayout.on( 'stateChanged', function(){
+  var state = JSON.stringify( myLayout.toConfig() );
+  localStorage.setItem( 'savedState', state );
 });
 
 $('#btnAdd').click(function(){
