@@ -50,11 +50,11 @@ $('#btnAdd').click(function(){
 
 });
 
-$.get('/modes.html',function(data){
+$.get('modes.html',function(data){
   $('#selMode').html(data)
 });
 
-$.get('/themes.html',function(data){
+$.get('themes.html',function(data){
   $('#selTheme').html(data)
 });
 
