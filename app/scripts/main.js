@@ -20,7 +20,7 @@ var myLayout = new GoldenLayout( config, $('#main') );
 
 myLayout.registerComponent( 'example', function( container, state ){
   var mode = $('#selMode').val() || 'javascript';
-  var theme = $('#selTheme').val() || "ace/theme/twilight";
+  var theme = $('#selTheme').val() || "ace/theme/monokai";
   var name = $('#txtName').val() || 'example';
   var fontSize = $('#selFontsize').val();
   var editor = ace.edit(container.getElement()[0]);
