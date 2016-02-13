@@ -37,7 +37,7 @@
       <option value="24px">24px</option>
     </select>
   </div>
-  <div id="main">
+  <div resize id="main">
   </div>
 
 
@@ -45,12 +45,16 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/golden-layout/dist/goldenlayout.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
   <script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+  <script src="scripts/module.js"></script>
+  <script src="scripts/services/golden-layout.service.js"></script>
+  <script src="scripts/directives/resize.directive.js"></script>
+  <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>
