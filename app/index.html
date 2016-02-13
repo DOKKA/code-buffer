@@ -20,23 +20,7 @@
   </head>
   <body>
 
-  <div id="menu">
-    <button id="btnAdd">+</button>
-    <input id="txtName" type="text" size="30" placeholder="Enter a name">
-    <select id="selMode" size="1"></select>
-    <select id="selTheme" size="1"></select>
-    <select id="selFontsize" size="1">
-      <option value="10px">10px</option>
-      <option value="11px">11px</option>
-      <option value="12px">12px</option>
-      <option value="13px">13px</option>
-      <option value="14px" selected="selected">14px</option>
-      <option value="16px">16px</option>
-      <option value="18px">18px</option>
-      <option value="20px">20px</option>
-      <option value="24px">24px</option>
-    </select>
-  </div>
+  <div menu id="menu"></div>
   <div resize id="main">
   </div>
 
@@ -52,8 +36,10 @@
 
     <!-- build:js scripts/main.js -->
   <script src="scripts/module.js"></script>
-  <script src="scripts/services/golden-layout.service.js"></script>
   <script src="scripts/directives/resize.directive.js"></script>
+  <script src="scripts/directives/modes.directive.js"></script>
+  <script src="scripts/directives/themes.directive.js"></script>
+  <script src="scripts/directives/menu.directive.js"></script>
   <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
