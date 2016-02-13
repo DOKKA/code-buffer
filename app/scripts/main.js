@@ -25,9 +25,18 @@
   myLayout.registerComponent( 'example',function( container, state ){
     console.log(state)
     var editor = ace.edit(container.getElement()[0]);
+    editor.$blockScrolling = Infinity;
+    editor.setValue(state.text || '',-1);
     editor.setTheme(state.theme || 'ace/theme/monokai');
     editor.session.setMode( 'ace/mode/'+(state.mode || 'javascript'));
     editor.setOptions({fontSize: state.size || '14px'});
+
+
+    editor.on('change', function(){
+      container.extendState({
+        text: editor.getValue()
+      });
+    });
     container.setTitle(state.name || 'untitled');
 
     container.on('resize',function(){
