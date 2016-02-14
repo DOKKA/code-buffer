@@ -23,7 +23,7 @@
 
   //this should be a service
   myLayout.registerComponent( 'example',function( container, state ){
-    console.log(state)
+    //console.log(state)
     var editor = ace.edit(container.getElement()[0]);
     editor.$blockScrolling = Infinity;
     editor.setValue(state.text || '',-1);
